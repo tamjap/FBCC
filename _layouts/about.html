@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+
+<html>
+    {% include head.html %}
+
+    <body class="is-loading">
+        <!-- Wrapper -->
+        <div id="wrapper">
+            {% include header.html %}
+            {% include menu.html %}
+            
+            <!-- Content -->
+			<!-- Information -->
+			<!-- Uses class 'posts' because the layout matches what I'm looking for and I didn't feel the need
+				to duplicate the style -->
+                    <section class="posts">
+                            <article>
+                            <!-- Service Times -->
+                                <span class="service_times">
+                                    <h2>Service Times</h2>
+                                    <h3>Sunday</h3>
+                                    <p>10:00 am - Sunday School</p>
+                                    <p>11:00 am - Church Service</p>
+                                    <p>7:00 pm - Evening Service</p>
+                                    <br />
+                                    <h3>Wednesday</h3>
+                                    <p>7:00 pm - Bible Study</p>
+                                </span>
+                            </article>
+                            <article>
+                            <!-- Map -->
+                                <h2>FIND US!</h2>
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2945.0748041979123!2d-92.83492498450222!3d37.50231203556084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87c5696bf147a2e3%3A0xd83b43817c2fb25d!2sFirst+Baptist+Church!5e1!3m2!1sen!2sus!4v1528331072006" allowfullscreen></iframe>
+                            </article>
+                            <article>
+                                <h2>Contact Us</h2>
+                                {% include contact.html %}
+                            </article>
+                    </section>
+
+            <!-- End Content -->
+            {% include footer.html %}
+        </div>
+    </body>
+</html>
