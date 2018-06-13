@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+
+<html>
+    {% include head.html %}
+
+    <body class="is-loading">
+        <!-- Wrapper -->
+        <div id="wrapper">
+            {% include header.html %}
+            {% include menu.html %}
+            
+            <!-- Content -->
+            <div class="Sermon" >
+                {% if page.image != null and page.image != false %}
+                    <div class="image" >
+                        <img src="/assets/images/{{ page.image }}" />
+                    </div>
+                {% endif %}
+                {% if page.audioFile != null and page.audioFile != false %}
+                    <div class="audio" >
+                        <audio controls preload="auto" autoplay >
+                            <source src="/assets/audio/{{ page.audioFile }}" type="audio/mpeg" />
+                            Your browser does not support the `audio` element
+                        </audio>
+                    </div>
+                {% endif %}
+                {% if page.verse != null and page.verse != false %}
+                    <div class="verse" >
+                        <h4>{{ page.verse }}</h4>
+                    </div>
+                {%  endif %}
+                <p>
+                    {{ page.content }}
+                </p>
+            </div>
+            <!-- End Content -->
+            {% include footer.html %}
+        </div>
+    </body>
+</html>
+  

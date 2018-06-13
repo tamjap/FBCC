@@ -4,16 +4,6 @@
 		<ul class="links">
 				<li {% if page.url == '/' %} class="active" {% endif %}><a href="{{ '' | absolute_url }}">Home</a></li>
 				<li {% if page.url == '/about/' %} class="active" {% endif %}><a href="{{ 'about' | absolute_url }}">About</a></li>
-        <!-- {% for page in site.pages %}
-		         {% if page.layout == "home" %}
-		         <li><a href="{{ "" | absolute_url }}">{{ page.title }}</a></li>
-	    	     {% endif %}
-		         {% endfor %} -->
-		    {% for page in site.pages %}
-		    {% if page.layout != "home" and page.layout!= "about" %}
-		    <li><a href="{{ page.url | absolute_url }}">{{ page.title }}</a></li>
-		    {% endif %}
-		    {% endfor %}
 		</ul>
 		<ul class="icons">
 				{% if site.twitter_url %}

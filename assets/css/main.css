@@ -2498,7 +2498,10 @@
 			width: 30%;
 			max-width: 150px;
 		}
-
+		
+		.Sermon img {
+			max-width: 100%;
+		}
 		@media screen and (max-width: 736px) {
 
 			.image.fit {
@@ -4520,3 +4523,8 @@
 		}
 
 	}
+
+.verse p {
+	font-style: italic;
+	font-weight: bold;
+}

@@ -1,0 +1,10 @@
+---
+layout: post
+title:  The Third Commandment
+date:   2018-06-10
+audioFile: 180610_cobb.mp3
+image: NameInVain.JPG
+category: sermon
+verse: Exodus 20:7
+---
+Thou shalt not take the name of the LORD thy God in vain; for the LORD will not hold him guiltless that taketh his name in vain.
