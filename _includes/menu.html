@@ -4,6 +4,7 @@
 		<ul class="links">
 				<li {% if page.url == '/' %} class="active" {% endif %}><a href="{{ '' | absolute_url }}">Home</a></li>
 				<li {% if page.url == '/about/' %} class="active" {% endif %}><a href="{{ 'about' | absolute_url }}">About</a></li>
+				<li><a href="{{ site.facebook_url }}" target="_blank">Facebook</a></li>
 		</ul>
 		<ul class="icons">
 				{% if site.twitter_url %}
@@ -12,9 +13,9 @@
 				{% if site.googleplus_url %}
 				<li><a href="{{ site.googleplus_url }}" class="icon fa-google-plus" target="_blank"><span class="label">Google+</span></a></li>
 				{% endif %}
-				{% if site.facebook_url %}
+				<!-- {% if site.facebook_url %}
 				<li><a href="{{ site.facebook_url }}" class="icon fa-facebook" target="_blank"><span class="label">Facebook</span></a></li>
-				{% endif %}
+				{% endif %} -->
 				{% if site.instagram_url %}
 				<li><a href="{{ site.instagram_url }}" class="icon fa-instagram" target="_blank"><span class="label">Instagram</span></a></li>
 				{% endif %}

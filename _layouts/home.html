@@ -1,4 +1,4 @@
-{% assign max_sermons = 1 %}
+{% assign max_sermons = 2 %}
 <!DOCTYPE HTML>
 <!--
 	   Massively by HTML5 UP
@@ -19,13 +19,17 @@
             {% include menu.html %}
 
 			<!-- Featured Post -->
-			<article class="post featured">
-			    <header class="major">
-				    <h2>Matthew 11:28</h2>
-				    <h4>Come unto me, all ye that labour and are heavy laden, and I will give you...</h4>
-			    </header>
-			    <img class="image main" src="assets/images/rest.jpg" alt="" />
-			</article>
+			{% for post in site.categories.featured %}
+				{% if post.active == true %}
+					<article class="post featured">
+						<header class="major">
+							<h2>{{ post.title }}</h2>
+							<h4>{{ post.subHeader }}</h4>
+						</header>
+						<img class="image main" src="/assets/images/{{ post.image }}" alt="" />
+					</article>
+				{% endif %}
+			{% endfor %}
 
 			<!-- Sermons -->
 			<section class="posts">
@@ -58,7 +62,7 @@
 			</section>
 			<footer>
 				{% if site.categories.sermon.size > max_sermons %}
-					<form action="/sermons/" method="get">
+					<form action="/sermons.html" method="get">
 						<ul class="actions">
 							<li>
 								<input type="submit" value="More" />
@@ -66,9 +70,9 @@
 						</ul>
 					</form>
 				{% endif %}
-				</footer>
+			</footer>
+			{% include footer.html %}
 		</div>
-		{% include footer.html %}
     </body>
 
 </html>
